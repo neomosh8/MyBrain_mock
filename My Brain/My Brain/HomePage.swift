@@ -12,6 +12,9 @@ struct HomeView: View {
     // State variable that tracks whether notifications are active
     @State private var isTimerActive = false
     
+    // NEW: Track whether to navigate to PerformanceView
+    @State private var showPerformanceView = false
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 16) {
@@ -31,8 +34,12 @@ struct HomeView: View {
                         Image(systemName: "headphones")
                             .font(.title2)
                         
+                        // Brain icon -> on tap, show PerformanceView
                         Image(systemName: "brain")
                             .font(.title2)
+                            .onTapGesture {
+                                showPerformanceView = true
+                            }
                         
                         // Example: Underline text-based "Settings":
                         VStack(spacing: 4) {
@@ -89,6 +96,14 @@ struct HomeView: View {
                 }
                 
                 Spacer()
+                
+                // Hidden NavigationLink that is activated by tapping the brain icon
+                NavigationLink(
+                    destination: PerformanceView(),
+                    isActive: $showPerformanceView
+                ) {
+                    EmptyView()
+                }
             }
             .background(Color.black.edgesIgnoringSafeArea(.all))
         }
@@ -99,7 +114,6 @@ struct HomeView: View {
     
     // MARK: - Local Notification Helpers
     
-    // 1) Schedule a repeating notification
     func scheduleNotification(everyMinutes minutes: Int) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             if granted, error == nil {
@@ -111,7 +125,7 @@ struct HomeView: View {
                 
                 // Repeats every X minutes
                 let trigger = UNTimeIntervalNotificationTrigger(
-//                    timeInterval: Double(minutes * 60),
+                    // timeInterval: Double(minutes * 60),
                     timeInterval: Double(minutes),
                     repeats: true
                 )
@@ -133,36 +147,40 @@ struct HomeView: View {
         }
     }
     
-    // 2) Cancel (remove) the previously scheduled notification
     func cancelScheduledNotification() {
         UNUserNotificationCenter.current().removePendingNotificationRequests(
             withIdentifiers: ["MyScheduledNotification"]
         )
     }
     
-    // 3) Check if notification is active
     func checkIfNotificationIsActive() {
         UNUserNotificationCenter.current().getPendingNotificationRequests { requests in
-            // Look for the request with our known identifier
             let isScheduled = requests.contains { $0.identifier == "MyScheduledNotification" }
-            
-            // Update the UI on the main thread
             DispatchQueue.main.async {
                 self.isTimerActive = isScheduled
             }
         }
     }
     
-    // 4) Toggle function for convenience
     func toggleNotification() {
         if isTimerActive {
-            // Cancel if active
             cancelScheduledNotification()
             isTimerActive = false
         } else {
-            // Schedule if not
-            scheduleNotification(everyMinutes: 60) // set whatever interval you like
+            scheduleNotification(everyMinutes: 60)
             isTimerActive = true
         }
+    }
+}
+
+// MARK: - PerformanceView
+struct PerformanceView: View {
+    var body: some View {
+        VStack {
+            Text("Performance View")
+                .font(.largeTitle)
+                .bold()
+        }
+        .padding()
     }
 }
