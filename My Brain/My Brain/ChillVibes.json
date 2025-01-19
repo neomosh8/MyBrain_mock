@@ -1,0 +1,77 @@
+{
+  "text": "The beach was a popular spot on a hot summer day. People were swimming in the ocean, building sandcastles, and playing beach volleyball.",
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.23999999463558197
+    },
+    {
+      "word": "beach",
+      "start": 0.25,
+      "end": 0.5
+    },
+    {
+      "word": "was",
+      "start": 0.51,
+      "end": 0.7
+    },
+    {
+      "word": "a",
+      "start": 0.71,
+      "end": 0.8
+    },
+    {
+      "word": "popular",
+      "start": 0.81,
+      "end": 1.2
+    },
+    {
+      "word": "spot",
+      "start": 1.21,
+      "end": 1.5
+    },
+    {
+      "word": "on",
+      "start": 1.51,
+      "end": 1.7
+    },
+    {
+      "word": "a",
+      "start": 1.71,
+      "end": 1.8
+    },
+    {
+      "word": "hot",
+      "start": 1.81,
+      "end": 2.0
+    },
+    {
+      "word": "summer",
+      "start": 2.01,
+      "end": 2.5
+    },
+    {
+      "word": "day.",
+      "start": 2.51,
+      "end": 2.9
+    },
+    // ... Add all words with accurate timings
+    {
+      "word": "playing",
+      "start": 7.0,
+      "end": 7.3
+    },
+    {
+      "word": "beach",
+      "start": 7.31,
+      "end": 7.5
+    },
+    {
+      "word": "volleyball.",
+      "start": 7.51,
+      "end": 7.9
+    }
+  ]
+}
+

@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		689EE2B12D3D5901005D342C /* Send to My Brain.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 689EE2A72D3D5901005D342C /* Send to My Brain.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		689EE2BD2D3D5C0A005D342C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 689EE2BC2D3D5C0A005D342C /* Lottie */; };
+		689EE2D42D3D600F005D342C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 689EE2D32D3D600F005D342C /* Lottie */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		689EE2D12D3D5EFE005D342C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 689EE2312D3C4A6A005D342C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 689EE2A62D3D5901005D342C;
+			remoteInfo = "Send to My Brain";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		689EE2B22D3D5901005D342C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				689EE2B12D3D5901005D342C /* Send to My Brain.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		689EE2392D3C4A6A005D342C /* My Brain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Brain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		689EE2A72D3D5901005D342C /* Send to My Brain.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Send to My Brain.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		689EE2B52D3D5901005D342C /* Exceptions for "Send to My Brain" folder in "Send to My Brain" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 689EE2A62D3D5901005D342C /* Send to My Brain */;
+		};
+		689EE2BB2D3D5BCF005D342C /* Exceptions for "My Brain" folder in "Send to My Brain" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LottieView.swift,
+			);
+			target = 689EE2A62D3D5901005D342C /* Send to My Brain */;
+		};
+		689EE2D92D3D60D4005D342C /* Exceptions for "Send to My Brain" folder in "My Brain" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				loadingAnimation.json,
+				ShareExtensionProgressView.swift,
+			);
+			target = 689EE2382D3C4A6A005D342C /* My Brain */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		689EE23B2D3C4A6A005D342C /* My Brain */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				689EE2BB2D3D5BCF005D342C /* Exceptions for "My Brain" folder in "Send to My Brain" target */,
+			);
+			path = "My Brain";
+			sourceTree = "<group>";
+		};
+		689EE2A82D3D5901005D342C /* Send to My Brain */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				689EE2D92D3D60D4005D342C /* Exceptions for "Send to My Brain" folder in "My Brain" target */,
+				689EE2B52D3D5901005D342C /* Exceptions for "Send to My Brain" folder in "Send to My Brain" target */,
+			);
+			path = "Send to My Brain";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		689EE2362D3C4A6A005D342C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689EE2BD2D3D5C0A005D342C /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689EE2A42D3D5901005D342C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689EE2D42D3D600F005D342C /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		689EE2302D3C4A6A005D342C = {
+			isa = PBXGroup;
+			children = (
+				689EE23B2D3C4A6A005D342C /* My Brain */,
+				689EE2A82D3D5901005D342C /* Send to My Brain */,
+				689EE23A2D3C4A6A005D342C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		689EE23A2D3C4A6A005D342C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				689EE2392D3C4A6A005D342C /* My Brain.app */,
+				689EE2A72D3D5901005D342C /* Send to My Brain.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		689EE2382D3C4A6A005D342C /* My Brain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689EE2492D3C4A6C005D342C /* Build configuration list for PBXNativeTarget "My Brain" */;
+			buildPhases = (
+				689EE2352D3C4A6A005D342C /* Sources */,
+				689EE2362D3C4A6A005D342C /* Frameworks */,
+				689EE2372D3C4A6A005D342C /* Resources */,
+				689EE2B22D3D5901005D342C /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				689EE2D22D3D5EFE005D342C /* PBXTargetDependency */,
+				689EE2D02D3D5EE3005D342C /* PBXTargetDependency */,
+				689EE2CE2D3D5EDF005D342C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				689EE23B2D3C4A6A005D342C /* My Brain */,
+			);
+			name = "My Brain";
+			packageProductDependencies = (
+				689EE2BC2D3D5C0A005D342C /* Lottie */,
+			);
+			productName = "My Brain";
+			productReference = 689EE2392D3C4A6A005D342C /* My Brain.app */;
+			productType = "com.apple.product-type.application";
+		};
+		689EE2A62D3D5901005D342C /* Send to My Brain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689EE2B62D3D5901005D342C /* Build configuration list for PBXNativeTarget "Send to My Brain" */;
+			buildPhases = (
+				689EE2A32D3D5901005D342C /* Sources */,
+				689EE2A42D3D5901005D342C /* Frameworks */,
+				689EE2A52D3D5901005D342C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				689EE2CC2D3D5ED1005D342C /* PBXTargetDependency */,
+				689EE2CA2D3D5ECE005D342C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				689EE2A82D3D5901005D342C /* Send to My Brain */,
+			);
+			name = "Send to My Brain";
+			packageProductDependencies = (
+				689EE2D32D3D600F005D342C /* Lottie */,
+			);
+			productName = "Send to My Brain";
+			productReference = 689EE2A72D3D5901005D342C /* Send to My Brain.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		689EE2312D3C4A6A005D342C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					689EE2382D3C4A6A005D342C = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					689EE2A62D3D5901005D342C = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = 689EE2342D3C4A6A005D342C /* Build configuration list for PBXProject "My Brain" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 689EE2302D3C4A6A005D342C;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 689EE23A2D3C4A6A005D342C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				689EE2382D3C4A6A005D342C /* My Brain */,
+				689EE2A62D3D5901005D342C /* Send to My Brain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		689EE2372D3C4A6A005D342C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689EE2A52D3D5901005D342C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		689EE2352D3C4A6A005D342C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689EE2A32D3D5901005D342C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		689EE2CA2D3D5ECE005D342C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 689EE2C92D3D5ECE005D342C /* Lottie-Dynamic */;
+		};
+		689EE2CC2D3D5ED1005D342C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 689EE2CB2D3D5ED1005D342C /* Lottie */;
+		};
+		689EE2CE2D3D5EDF005D342C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 689EE2CD2D3D5EDF005D342C /* Lottie */;
+		};
+		689EE2D02D3D5EE3005D342C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 689EE2CF2D3D5EE3005D342C /* Lottie-Dynamic */;
+		};
+		689EE2D22D3D5EFE005D342C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 689EE2A62D3D5901005D342C /* Send to My Brain */;
+			targetProxy = 689EE2D12D3D5EFE005D342C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		689EE2472D3C4A6C005D342C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		689EE2482D3C4A6C005D342C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		689EE24A2D3C4A6C005D342C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"My Brain/Preview Content\"";
+				DEVELOPMENT_TEAM = MS7857L94F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "neocore.My-Brain";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		689EE24B2D3C4A6C005D342C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"My Brain/Preview Content\"";
+				DEVELOPMENT_TEAM = MS7857L94F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "neocore.My-Brain";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		689EE2B32D3D5901005D342C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MS7857L94F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Send to My Brain/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Send to My Brain";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "neocore.My-Brain.Send-to-My-Brain";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		689EE2B42D3D5901005D342C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MS7857L94F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Send to My Brain/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Send to My Brain";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "neocore.My-Brain.Send-to-My-Brain";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		689EE2342D3C4A6A005D342C /* Build configuration list for PBXProject "My Brain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689EE2472D3C4A6C005D342C /* Debug */,
+				689EE2482D3C4A6C005D342C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		689EE2492D3C4A6C005D342C /* Build configuration list for PBXNativeTarget "My Brain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689EE24A2D3C4A6C005D342C /* Debug */,
+				689EE24B2D3C4A6C005D342C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		689EE2B62D3D5901005D342C /* Build configuration list for PBXNativeTarget "Send to My Brain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689EE2B32D3D5901005D342C /* Debug */,
+				689EE2B42D3D5901005D342C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		689EE2BC2D3D5C0A005D342C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		689EE2C92D3D5ECE005D342C /* Lottie-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = "Lottie-Dynamic";
+		};
+		689EE2CB2D3D5ED1005D342C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		689EE2CD2D3D5EDF005D342C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		689EE2CF2D3D5EE3005D342C /* Lottie-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = "Lottie-Dynamic";
+		};
+		689EE2D32D3D600F005D342C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 689EE2312D3C4A6A005D342C /* Project object */;
+}
