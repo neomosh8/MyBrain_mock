@@ -1,5 +1,5 @@
-// HomeView.swift
 import SwiftUI
+import UserNotifications
 
 struct HomeView: View {
     let cardData: [CardModel] = [
@@ -9,12 +9,14 @@ struct HomeView: View {
         CardModel(title: "Throwback",  subtitle: "Classic tunes", imageName: "cover4")
     ]
     
+    // State variable that tracks whether notifications are active
+    @State private var isTimerActive = false
+    
     var body: some View {
         NavigationView {
-            // Main vertical stack
             VStack(alignment: .leading, spacing: 16) {
                 
-                // Top row: "MyBrain" + icons on the right
+                // Top row
                 HStack {
                     Text("MyBrain")
                         .font(.largeTitle)
@@ -25,24 +27,41 @@ struct HomeView: View {
                     
                     // Glossy container with icons
                     HStack(spacing: 16) {
+                        
                         Image(systemName: "headphones")
                             .font(.title2)
+                        
                         Image(systemName: "brain")
                             .font(.title2)
-                        Image(systemName: "gearshape")
-                            .font(.title2)
+                        
+                        // Example: Underline text-based "Settings":
+                        VStack(spacing: 4) {
+                            Image(systemName: "gearshape")
+                                .font(.title2)
+                                .foregroundColor(.white)
+                            
+                            // Show a small line if isTimerActive is true
+                            if isTimerActive {
+                                Rectangle()
+                                    .frame(height: 2)
+                                    .frame(width: 10)
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .onTapGesture {
+                            toggleNotification()
+                        }
                     }
                     .foregroundColor(.white)
                     .padding(.vertical, 8)
                     .padding(.horizontal, 12)
                     .background(
                         RoundedRectangle(cornerRadius: 12)
-                            // Ultra-thin material background
                             .fill(.ultraThinMaterial)
                     )
                 }
                 .padding(.horizontal, 16)
-                .padding(.top, 40) // top padding to avoid notch
+                .padding(.top, 40)
                 
                 // Secondary title
                 Text("My Thoughts")
@@ -55,7 +74,6 @@ struct HomeView: View {
                 ScrollView {
                     VStack(spacing: 16) {
                         ForEach(cardData) { item in
-                            // Wrap each CardItem in a NavigationLink
                             NavigationLink(destination: PlayView(title: item.title)) {
                                 CardItem(
                                     title: item.title,
@@ -63,27 +81,88 @@ struct HomeView: View {
                                     imageName: item.imageName
                                 )
                             }
-                            .buttonStyle(PlainButtonStyle()) // Removes the default NavigationLink styling
+                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                     .padding(.vertical, 8)
-                    // Add a bit of horizontal padding here
-                    // to give cards some room on the left/right
                     .padding(.horizontal, 16)
                 }
                 
                 Spacer()
             }
-            .background(
-                // Set a background color or image if needed
-                Color.black.edgesIgnoringSafeArea(.all)
-            )
+            .background(Color.black.edgesIgnoringSafeArea(.all))
+        }
+        .onAppear {
+            checkIfNotificationIsActive()
         }
     }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+    
+    // MARK: - Local Notification Helpers
+    
+    // 1) Schedule a repeating notification
+    func scheduleNotification(everyMinutes minutes: Int) {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted, error == nil {
+                
+                let content = UNMutableNotificationContent()
+                content.title = "You have a new thought 💡"
+                content.body = "Tap here to explore your new thought: 'Where does sesami come from?'"
+                content.sound = .default
+                
+                // Repeats every X minutes
+                let trigger = UNTimeIntervalNotificationTrigger(
+//                    timeInterval: Double(minutes * 60),
+                    timeInterval: Double(minutes),
+                    repeats: true
+                )
+                
+                let request = UNNotificationRequest(
+                    identifier: "MyScheduledNotification",
+                    content: content,
+                    trigger: trigger
+                )
+                
+                UNUserNotificationCenter.current().add(request) { error in
+                    if let error = error {
+                        print("Error scheduling notification: \(error.localizedDescription)")
+                    }
+                }
+            } else {
+                print("Notification permission not granted or error occurred.")
+            }
+        }
+    }
+    
+    // 2) Cancel (remove) the previously scheduled notification
+    func cancelScheduledNotification() {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(
+            withIdentifiers: ["MyScheduledNotification"]
+        )
+    }
+    
+    // 3) Check if notification is active
+    func checkIfNotificationIsActive() {
+        UNUserNotificationCenter.current().getPendingNotificationRequests { requests in
+            // Look for the request with our known identifier
+            let isScheduled = requests.contains { $0.identifier == "MyScheduledNotification" }
+            
+            // Update the UI on the main thread
+            DispatchQueue.main.async {
+                self.isTimerActive = isScheduled
+            }
+        }
+    }
+    
+    // 4) Toggle function for convenience
+    func toggleNotification() {
+        if isTimerActive {
+            // Cancel if active
+            cancelScheduledNotification()
+            isTimerActive = false
+        } else {
+            // Schedule if not
+            scheduleNotification(everyMinutes: 60) // set whatever interval you like
+            isTimerActive = true
+        }
     }
 }
