@@ -10,8 +10,8 @@ struct HomeView: View {
         ),
 
         CardModel(
-            title: "The Mindset Mentor Podcast EP #117",
-            subtitle: "Define goals and pursue them wholeheartedly.",
+            title: "The Mindset Mentor Podcast",
+            subtitle: "6 Habits to Make You Productive",
             imageName: "cover2"
         ),
 

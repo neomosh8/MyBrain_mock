@@ -44,26 +44,4 @@ struct CardItem: View {
         )
     }
 }
-// MARK: - PREVIEW
-struct CardItem_Previews: PreviewProvider {
-    static var previews: some View {
-        // Demonstrate how the card looks in both Light and Dark Modes
-        Group {
-            CardItem(
-                title: "Sample Title",
-                subtitle: "Sample Subtitle",
-                imageName: "exampleImage"
-            )
-            .preferredColorScheme(.light)
-            
-            CardItem(
-                title: "Sample Title",
-                subtitle: "Sample Subtitle",
-                imageName: "exampleImage"
-            )
-            .preferredColorScheme(.dark)
-        }
-        .previewLayout(.sizeThatFits)
-        .padding()
-    }
-}
+
