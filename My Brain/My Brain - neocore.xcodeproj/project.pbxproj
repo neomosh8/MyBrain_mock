@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		689EE2B12D3D5901005D342C /* Send to My Brain.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 689EE2A72D3D5901005D342C /* Send to My Brain.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		689EE2B12D3D5901005D342C /* Send to My Brain - neocore.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 689EE2A72D3D5901005D342C /* Send to My Brain - neocore.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		689EE2BD2D3D5C0A005D342C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 689EE2BC2D3D5C0A005D342C /* Lottie */; };
 		689EE2D42D3D600F005D342C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 689EE2D32D3D600F005D342C /* Lottie */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				689EE2B12D3D5901005D342C /* Send to My Brain.appex in Embed Foundation Extensions */,
+				689EE2B12D3D5901005D342C /* Send to My Brain - neocore.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,32 +37,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		689EE2392D3C4A6A005D342C /* My Brain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Brain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		689EE2A72D3D5901005D342C /* Send to My Brain.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Send to My Brain.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		689EE2392D3C4A6A005D342C /* My Brain - neocore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Brain - neocore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		689EE2A72D3D5901005D342C /* Send to My Brain - neocore.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Send to My Brain - neocore.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		689EE2B52D3D5901005D342C /* Exceptions for "Send to My Brain" folder in "Send to My Brain" target */ = {
+		689EE2B52D3D5901005D342C /* Exceptions for "Send to My Brain" folder in "Send to My Brain - neocore" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 689EE2A62D3D5901005D342C /* Send to My Brain */;
+			target = 689EE2A62D3D5901005D342C /* Send to My Brain - neocore */;
 		};
-		689EE2BB2D3D5BCF005D342C /* Exceptions for "My Brain" folder in "Send to My Brain" target */ = {
+		689EE2BB2D3D5BCF005D342C /* Exceptions for "My Brain" folder in "Send to My Brain - neocore" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				LottieView.swift,
 			);
-			target = 689EE2A62D3D5901005D342C /* Send to My Brain */;
+			target = 689EE2A62D3D5901005D342C /* Send to My Brain - neocore */;
 		};
-		689EE2D92D3D60D4005D342C /* Exceptions for "Send to My Brain" folder in "My Brain" target */ = {
+		689EE2D92D3D60D4005D342C /* Exceptions for "Send to My Brain" folder in "My Brain - neocore" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				loadingAnimation.json,
 				ShareExtensionProgressView.swift,
 			);
-			target = 689EE2382D3C4A6A005D342C /* My Brain */;
+			target = 689EE2382D3C4A6A005D342C /* My Brain - neocore */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -70,7 +70,7 @@
 		689EE23B2D3C4A6A005D342C /* My Brain */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				689EE2BB2D3D5BCF005D342C /* Exceptions for "My Brain" folder in "Send to My Brain" target */,
+				689EE2BB2D3D5BCF005D342C /* Exceptions for "My Brain" folder in "Send to My Brain - neocore" target */,
 			);
 			path = "My Brain";
 			sourceTree = "<group>";
@@ -78,8 +78,8 @@
 		689EE2A82D3D5901005D342C /* Send to My Brain */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				689EE2D92D3D60D4005D342C /* Exceptions for "Send to My Brain" folder in "My Brain" target */,
-				689EE2B52D3D5901005D342C /* Exceptions for "Send to My Brain" folder in "Send to My Brain" target */,
+				689EE2D92D3D60D4005D342C /* Exceptions for "Send to My Brain" folder in "My Brain - neocore" target */,
+				689EE2B52D3D5901005D342C /* Exceptions for "Send to My Brain" folder in "Send to My Brain - neocore" target */,
 			);
 			path = "Send to My Brain";
 			sourceTree = "<group>";
@@ -118,8 +118,8 @@
 		689EE23A2D3C4A6A005D342C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				689EE2392D3C4A6A005D342C /* My Brain.app */,
-				689EE2A72D3D5901005D342C /* Send to My Brain.appex */,
+				689EE2392D3C4A6A005D342C /* My Brain - neocore.app */,
+				689EE2A72D3D5901005D342C /* Send to My Brain - neocore.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		689EE2382D3C4A6A005D342C /* My Brain */ = {
+		689EE2382D3C4A6A005D342C /* My Brain - neocore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 689EE2492D3C4A6C005D342C /* Build configuration list for PBXNativeTarget "My Brain" */;
+			buildConfigurationList = 689EE2492D3C4A6C005D342C /* Build configuration list for PBXNativeTarget "My Brain - neocore" */;
 			buildPhases = (
 				689EE2352D3C4A6A005D342C /* Sources */,
 				689EE2362D3C4A6A005D342C /* Frameworks */,
@@ -146,17 +146,17 @@
 			fileSystemSynchronizedGroups = (
 				689EE23B2D3C4A6A005D342C /* My Brain */,
 			);
-			name = "My Brain";
+			name = "My Brain - neocore";
 			packageProductDependencies = (
 				689EE2BC2D3D5C0A005D342C /* Lottie */,
 			);
 			productName = "My Brain";
-			productReference = 689EE2392D3C4A6A005D342C /* My Brain.app */;
+			productReference = 689EE2392D3C4A6A005D342C /* My Brain - neocore.app */;
 			productType = "com.apple.product-type.application";
 		};
-		689EE2A62D3D5901005D342C /* Send to My Brain */ = {
+		689EE2A62D3D5901005D342C /* Send to My Brain - neocore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 689EE2B62D3D5901005D342C /* Build configuration list for PBXNativeTarget "Send to My Brain" */;
+			buildConfigurationList = 689EE2B62D3D5901005D342C /* Build configuration list for PBXNativeTarget "Send to My Brain - neocore" */;
 			buildPhases = (
 				689EE2A32D3D5901005D342C /* Sources */,
 				689EE2A42D3D5901005D342C /* Frameworks */,
@@ -171,12 +171,12 @@
 			fileSystemSynchronizedGroups = (
 				689EE2A82D3D5901005D342C /* Send to My Brain */,
 			);
-			name = "Send to My Brain";
+			name = "Send to My Brain - neocore";
 			packageProductDependencies = (
 				689EE2D32D3D600F005D342C /* Lottie */,
 			);
 			productName = "Send to My Brain";
-			productReference = 689EE2A72D3D5901005D342C /* Send to My Brain.appex */;
+			productReference = 689EE2A72D3D5901005D342C /* Send to My Brain - neocore.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -214,8 +214,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				689EE2382D3C4A6A005D342C /* My Brain */,
-				689EE2A62D3D5901005D342C /* Send to My Brain */,
+				689EE2382D3C4A6A005D342C /* My Brain - neocore */,
+				689EE2A62D3D5901005D342C /* Send to My Brain - neocore */,
 			);
 		};
 /* End PBXProject section */
@@ -273,7 +273,7 @@
 		};
 		689EE2D22D3D5EFE005D342C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 689EE2A62D3D5901005D342C /* Send to My Brain */;
+			target = 689EE2A62D3D5901005D342C /* Send to My Brain - neocore */;
 			targetProxy = 689EE2D12D3D5EFE005D342C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -518,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		689EE2492D3C4A6C005D342C /* Build configuration list for PBXNativeTarget "My Brain" */ = {
+		689EE2492D3C4A6C005D342C /* Build configuration list for PBXNativeTarget "My Brain - neocore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				689EE24A2D3C4A6C005D342C /* Debug */,
@@ -527,7 +527,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		689EE2B62D3D5901005D342C /* Build configuration list for PBXNativeTarget "Send to My Brain" */ = {
+		689EE2B62D3D5901005D342C /* Build configuration list for PBXNativeTarget "Send to My Brain - neocore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				689EE2B32D3D5901005D342C /* Debug */,
