@@ -42,13 +42,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		689EE2B52D3D5901005D342C /* Exceptions for "Send to My Brain" folder in "Send to My Brain - neocore" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 689EE2A62D3D5901005D342C /* Send to My Brain - neocore */;
-		};
 		689EE2BB2D3D5BCF005D342C /* Exceptions for "My Brain" folder in "Send to My Brain - neocore" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -79,7 +72,6 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				689EE2D92D3D60D4005D342C /* Exceptions for "Send to My Brain" folder in "My Brain - neocore" target */,
-				689EE2B52D3D5901005D342C /* Exceptions for "Send to My Brain" folder in "Send to My Brain - neocore" target */,
 			);
 			path = "Send to My Brain";
 			sourceTree = "<group>";
@@ -409,6 +401,7 @@
 				DEVELOPMENT_TEAM = MS7857L94F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Brain";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -438,6 +431,7 @@
 				DEVELOPMENT_TEAM = MS7857L94F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Brain";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
