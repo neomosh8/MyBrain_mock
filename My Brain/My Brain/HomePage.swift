@@ -3,10 +3,66 @@ import UserNotifications
 
 struct HomeView: View {
     let cardData: [CardModel] = [
-        CardModel(title: "Chill Vibes", subtitle: "Relaxing music", imageName: "cover1"),
-        CardModel(title: "Focus Beats", subtitle: "Stay on task", imageName: "cover2"),
-        CardModel(title: "Top 50",     subtitle: "Today’s hits",  imageName: "cover3"),
-        CardModel(title: "Throwback",  subtitle: "Classic tunes", imageName: "cover4")
+        CardModel(
+            title: "Maximize Your Mornings",
+            subtitle: "A quick routine can energize your entire day.",
+            imageName: "cover1"
+        ),
+
+        CardModel(
+            title: "The Mindset Mentor Podcast EP #117",
+            subtitle: "Define goals and pursue them wholeheartedly.",
+            imageName: "cover2"
+        ),
+
+        CardModel(
+            title: "Atomic Habits by James Clear",
+            subtitle: "Small daily changes create big results.",
+            imageName: "cover3"
+        ),
+
+        CardModel(
+            title: "On Purpose with Jay Shetty EP #76",
+            subtitle: "Turn setbacks into opportunities for growth.",
+            imageName: "cover4"
+        ),
+
+        CardModel(
+            title: "Embrace Lifelong Learning",
+            subtitle: "Invest in skills that expand your horizon.",
+            imageName: "cover5"
+        ),
+
+        CardModel(
+            title: "Deep Work by Cal Newport",
+            subtitle: "Guard your focus to achieve meaningful output.",
+            imageName: "cover6"
+        ),
+
+        CardModel(
+            title: "Unlocking Us with Brené Brown EP #42",
+            subtitle: "Use vulnerability to build genuine connections.",
+            imageName: "cover7"
+        ),
+
+        CardModel(
+            title: "Think Again by Adam Grant",
+            subtitle: "Reevaluate beliefs for continuous growth.",
+            imageName: "cover8"
+        ),
+
+        CardModel(
+            title: "The 1% Better Principle",
+            subtitle: "Tiny improvements lead to major milestones.",
+            imageName: "cover9"
+        ),
+
+        CardModel(
+            title: "Blockchain for Everyday Use",
+            subtitle: "Secure, decentralized solutions beyond crypto.",
+            imageName: "cover7"
+        )
+
     ]
     
     /// 1) Create a PerformanceViewModel instance
@@ -127,7 +183,8 @@ struct HomeView: View {
                 
                 let content = UNMutableNotificationContent()
                 content.title = "You have a new thought 💡"
-                content.body = "Tap here to explore your new thought: 'Where does sesami come from?'"
+                content.body = "Explore your new thought: 'Habits, Deep Focus & Lifelong Learning'"
+
                 content.sound = .default
                 
                 let trigger = UNTimeIntervalNotificationTrigger(

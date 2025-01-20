@@ -1,7 +1,5 @@
-//CardItem.Swift
 import SwiftUI
 
-// MARK: - CardItem
 struct CardItem: View {
     let title: String
     let subtitle: String
@@ -10,36 +8,31 @@ struct CardItem: View {
     var body: some View {
         HStack(alignment: .center, spacing: 16) {
             
-            // Cover image on the left
+            // Larger cover image
             Image(imageName)
                 .resizable()
                 .scaledToFill()
-                .frame(width: 60, height: 60)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .frame(width: 80, height: 80)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             
-            // Title + subtitle on the right
-            VStack(alignment: .leading, spacing: 4) {
+            // Bigger text sizes
+            VStack(alignment: .leading, spacing: 8) {
                 Text(title)
-                    .font(.headline)
+                    .font(.title3)            // Bigger headline
+                    .fontWeight(.bold)
                     .foregroundColor(.primary)
                 
                 Text(subtitle)
-                    .font(.subheadline)
+                    .font(.body)              // Larger subheadline
                     .foregroundColor(.secondary)
             }
             
             Spacer()
         }
-        .padding()
-        // Ultra-thin material for a glossy effect
+        .padding(20)
         .background(
             RoundedRectangle(cornerRadius: 12)
                 .fill(.ultraThinMaterial)
         )
-        // Optional stroke for an extra border highlight
-        // .overlay(
-        //    RoundedRectangle(cornerRadius: 12)
-        //        .stroke(Color.white.opacity(0.2), lineWidth: 1)
-        // )
     }
 }
