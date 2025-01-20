@@ -4,8 +4,6 @@ import AVFoundation
 struct PlayView: View {
     let title: String
     
-    // MARK: - Properties
-    
     @State private var audioPlayer: AVAudioPlayer?
     @State private var isPlaying = false
     @State private var currentTime: Double = 0.0
@@ -13,23 +11,39 @@ struct PlayView: View {
     @State private var audioText: AudioText = AudioText(text: "", words: [])
     @State private var timer: Timer?
     
-    // Computed property to split text into words
+    // Computed property to get array of Word objects
     private var wordList: [Word] {
         audioText.words
     }
     
-    // MARK: - Body
-    
     var body: some View {
         VStack(spacing: 40) {
-            // Text Highlighting Section
-            ScrollView {
-                Text(highlightedText())
-                    .font(.title2)
+            // MARK: - Wrapped Text
+            ScrollViewReader { proxy in
+                ScrollView {
+                    FlowLayout(
+                        data: wordList.indices,   // each Int index
+                        spacing: 8
+                    ) { index in
+                        let word = wordList[index].word
+                        // Explicit `return` so Swift knows we produce a View
+                        return Text(word)
+                            .foregroundColor(index == currentWordIndex ? .black : .primary)
+                            .background(index == currentWordIndex ? Color.yellow : Color.clear)
+                            .font(index == currentWordIndex ? .headline : .body)
+                            .id(index)   // needed for scrollTo()
+                    }
                     .padding()
+                }
+                .onChange(of: currentWordIndex) { newValue in
+                    // Auto-scroll to highlighted word
+                    withAnimation {
+                        proxy.scrollTo(newValue, anchor: .center)
+                    }
+                }
             }
             
-            // Play Button
+            // MARK: - Playback Button
             Button(action: {
                 togglePlayback()
             }) {
@@ -51,13 +65,10 @@ struct PlayView: View {
         }
     }
     
-    // MARK: - Functions
+    // MARK: - Audio/JSON Helpers
     
-    /// Load the AudioText data from JSON file
     private func loadAudioText() {
-        // Derive the JSON filename from the title
-        // Assuming JSON filenames have no spaces and end with .json
-        let jsonFileName = title.replacingOccurrences(of: " ", with: "") // e.g., "Chill Vibes" -> "ChillVibes"
+        let jsonFileName = title.replacingOccurrences(of: " ", with: "")
         
         guard let url = Bundle.main.url(forResource: jsonFileName, withExtension: "json") else {
             print("JSON file \(jsonFileName).json not found.")
@@ -76,10 +87,8 @@ struct PlayView: View {
         }
     }
     
-    /// Setup the AVAudioPlayer
     private func setupAudioPlayer() {
-        // Use the updated filename without spaces
-        let audioFileName = title.replacingOccurrences(of: " ", with: "") // e.g., "Chill Vibes" -> "ChillVibes"
+        let audioFileName = title.replacingOccurrences(of: " ", with: "")
         
         guard let url = Bundle.main.url(forResource: audioFileName, withExtension: "mp3") else {
             print("Audio file \(audioFileName).mp3 not found.")
@@ -94,7 +103,8 @@ struct PlayView: View {
         }
     }
     
-    /// Toggle playback state
+    // MARK: - Playback Logic
+    
     private func togglePlayback() {
         guard let player = audioPlayer else { return }
         
@@ -109,7 +119,6 @@ struct PlayView: View {
         isPlaying.toggle()
     }
     
-    /// Start the timer to track playback time
     private func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { _ in
             guard let player = audioPlayer else { return }
@@ -118,7 +127,6 @@ struct PlayView: View {
         }
     }
     
-    /// Update the current word index based on currentTime
     private func updateCurrentWord() {
         for (index, word) in wordList.enumerated() {
             if currentTime >= word.start && currentTime <= word.end {
@@ -131,31 +139,10 @@ struct PlayView: View {
             }
         }
     }
-    
-    /// Generate the highlighted text
-    private func highlightedText() -> AttributedString {
-        var attributed = AttributedString(audioText.text)
-        
-        for (index, word) in wordList.enumerated() {
-            // Find the range of the word in the full text
-            // This simplistic approach assumes words are unique and in order
-            if let range = attributed.range(of: word.word) {
-                if index == currentWordIndex && isPlaying {
-                    attributed[range].foregroundColor = .blue
-                    attributed[range].font = .headline
-                } else {
-                    attributed[range].foregroundColor = .primary
-                    attributed[range].font = .body
-                }
-            }
-        }
-        
-        return attributed
-    }
 }
 
 struct PlayView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayView(title: "ChillVibes") // Use the updated title without spaces
+        PlayView(title: "ChillVibes")
     }
 }

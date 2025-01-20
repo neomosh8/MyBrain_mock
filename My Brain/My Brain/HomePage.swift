@@ -9,10 +9,13 @@ struct HomeView: View {
         CardModel(title: "Throwback",  subtitle: "Classic tunes", imageName: "cover4")
     ]
     
+    /// 1) Create a PerformanceViewModel instance
+    @StateObject private var performanceViewModel = PerformanceViewModel()
+    
     // State variable that tracks whether notifications are active
     @State private var isTimerActive = false
     
-    // NEW: Track whether to navigate to PerformanceView
+    // New: Flag to control navigation to PerformanceView
     @State private var showPerformanceView = false
     
     var body: some View {
@@ -31,23 +34,26 @@ struct HomeView: View {
                     // Glossy container with icons
                     HStack(spacing: 16) {
                         
-                        Image(systemName: "headphones")
+//                        Image(systemName: "headphones")
+                        Image("headphone")
+                            .resizable()  // Makes the image resizable
+                            .aspectRatio(contentMode: .fit)  // Maintains aspect ratio
+                            .frame(width: 30, height: 30)  // Common size for interface icons
                             .font(.title2)
                         
-                        // Brain icon -> on tap, show PerformanceView
+                        /// 2) On tap, set `showPerformanceView` to true,
+                        ///    which triggers the NavigationLink below
                         Image(systemName: "brain")
                             .font(.title2)
                             .onTapGesture {
                                 showPerformanceView = true
                             }
                         
-                        // Example: Underline text-based "Settings":
                         VStack(spacing: 4) {
                             Image(systemName: "gearshape")
                                 .font(.title2)
                                 .foregroundColor(.white)
                             
-                            // Show a small line if isTimerActive is true
                             if isTimerActive {
                                 Rectangle()
                                     .frame(height: 2)
@@ -97,9 +103,10 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                // Hidden NavigationLink that is activated by tapping the brain icon
+                /// 3) Hidden NavigationLink that becomes active when
+                ///    `showPerformanceView` is set to true
                 NavigationLink(
-                    destination: PerformanceView(),
+                    destination: PerformanceView(viewModel: performanceViewModel),
                     isActive: $showPerformanceView
                 ) {
                     EmptyView()
@@ -123,7 +130,6 @@ struct HomeView: View {
                 content.body = "Tap here to explore your new thought: 'Where does sesami come from?'"
                 content.sound = .default
                 
-                // Repeats every X minutes
                 let trigger = UNTimeIntervalNotificationTrigger(
                     // timeInterval: Double(minutes * 60),
                     timeInterval: Double(minutes),
@@ -170,17 +176,5 @@ struct HomeView: View {
             scheduleNotification(everyMinutes: 60)
             isTimerActive = true
         }
-    }
-}
-
-// MARK: - PerformanceView
-struct PerformanceView: View {
-    var body: some View {
-        VStack {
-            Text("Performance View")
-                .font(.largeTitle)
-                .bold()
-        }
-        .padding()
     }
 }
