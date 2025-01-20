@@ -1,52 +1,91 @@
 import SwiftUI
 
-/// A simple flow layout that places items horizontally until they no longer fit,
-/// then wraps to the next line. Works in SwiftUI >= iOS 13.
-struct FlowLayout<Data: RandomAccessCollection, Content: View>: View where Data.Element: Hashable {
-    let data: Data
-    let spacing: CGFloat
-    let content: (Data.Element) -> Content
+/// A flow layout that places subviews horizontally, wrapping to a new line
+/// when they no longer fit.
+@available(iOS 16.0, *)
+struct Flow: Layout {
+    /// If you need to store info between layout passes, define a struct.
+    /// Otherwise, Void is fine.
+    typealias Cache = Void
     
-    @State private var totalHeight: CGFloat = .zero
+    /// Horizontal spacing between items.
+    var spacing: CGFloat = 8
     
-    var body: some View {
-        GeometryReader { geo in
-            generateContent(in: geo)
-        }
+    // 1) Create any needed cache (none here).
+    func makeCache(subviews: Subviews) -> Cache {
+        ()
     }
     
-    private func generateContent(in geo: GeometryProxy) -> some View {
+    // 2) Update cache if subviews or other data change (no-op here).
+    func updateCache(_ cache: inout Cache, subviews: Subviews) {
+        // no caching needed
+    }
+    
+    // 3) Measure how large our layout needs to be.
+    func sizeThatFits(
+        proposal: ProposedViewSize,
+        subviews: Subviews,
+        cache: inout Cache
+    ) -> CGSize {
+        
+        var width: CGFloat = 0
+        var height: CGFloat = 0
+        var rowHeight: CGFloat = 0
+        
+        // Use the container's width if provided, else infinite
+        let containerWidth = proposal.width ?? .infinity
+        
+        // Go through each subview, measuring them.
+        for subview in subviews {
+            // Ask the subview for its "ideal" size
+            let subviewSize = subview.sizeThatFits(.unspecified)
+            
+            // If it won't fit on this line, wrap to next line.
+            if width + subviewSize.width > containerWidth {
+                width = 0
+                height += rowHeight
+                rowHeight = 0
+            }
+            
+            rowHeight = max(rowHeight, subviewSize.height)
+            width += subviewSize.width + spacing
+        }
+        
+        // Add the final row’s height
+        height += rowHeight
+        
+        return CGSize(width: containerWidth, height: height)
+    }
+    
+    // 4) Actually place each subview at the correct (x,y) in that space.
+    func placeSubviews(
+        in bounds: CGRect,
+        proposal: ProposedViewSize,
+        subviews: Subviews,
+        cache: inout Cache
+    ) {
+        
         var xOffset: CGFloat = 0
         var yOffset: CGFloat = 0
         var rowHeight: CGFloat = 0
         
-        return ZStack(alignment: .topLeading) {
-            ForEach(data, id: \.self) { item in
-                content(item)
-                    .alignmentGuide(.leading) { dimension in
-                        // If the next item won't fit in this row, move to next row:
-                        if (xOffset + dimension.width) > geo.size.width {
-                            xOffset = 0
-                            yOffset += rowHeight
-                            rowHeight = 0
-                        }
-                        let result = xOffset
-                        xOffset += dimension.width + spacing
-                        rowHeight = max(rowHeight, dimension.height)
-                        return -result
-                    }
-                    .alignmentGuide(.top) { _ in
-                        let result = yOffset
-                        return -result
-                    }
+        for subview in subviews {
+            let subviewSize = subview.sizeThatFits(.unspecified)
+            
+            // If it doesn't fit in this row, wrap to next line.
+            if xOffset + subviewSize.width > bounds.width {
+                xOffset = 0
+                yOffset += rowHeight
+                rowHeight = 0
             }
+            
+            subview.place(
+                at: CGPoint(x: bounds.minX + xOffset, y: bounds.minY + yOffset),
+                proposal: ProposedViewSize(width: subviewSize.width, height: subviewSize.height)
+            )
+            
+            xOffset += subviewSize.width + spacing
+            rowHeight = max(rowHeight, subviewSize.height)
         }
-        .background(
-            GeometryReader { geo in
-                Color.clear.onAppear {
-                    totalHeight = geo.size.height
-                }
-            }
-        )
     }
 }
