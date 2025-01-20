@@ -197,7 +197,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 689EE2342D3C4A6A005D342C /* Build configuration list for PBXProject "My Brain" */;
+			buildConfigurationList = 689EE2342D3C4A6A005D342C /* Build configuration list for PBXProject "My Brain - neocore" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -509,7 +509,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		689EE2342D3C4A6A005D342C /* Build configuration list for PBXProject "My Brain" */ = {
+		689EE2342D3C4A6A005D342C /* Build configuration list for PBXProject "My Brain - neocore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				689EE2472D3C4A6C005D342C /* Debug */,
