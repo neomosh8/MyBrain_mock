@@ -24,7 +24,15 @@ struct CardItem: View {
                 
                 Text(subtitle)
                     .font(.body)              // Larger subheadline
-                    .foregroundColor(.secondary)
+                    .foregroundColor(
+                            Color(UIColor { traitCollection in
+                                // If the system is in Light Mode, return a darker gray
+                                // Otherwise, return the system's default secondary label color
+                                traitCollection.userInterfaceStyle == .light
+                                ? .black
+                                : .secondaryLabel
+                            })
+                        )
             }
             
             Spacer()
@@ -34,5 +42,28 @@ struct CardItem: View {
             RoundedRectangle(cornerRadius: 12)
                 .fill(.ultraThinMaterial)
         )
+    }
+}
+// MARK: - PREVIEW
+struct CardItem_Previews: PreviewProvider {
+    static var previews: some View {
+        // Demonstrate how the card looks in both Light and Dark Modes
+        Group {
+            CardItem(
+                title: "Sample Title",
+                subtitle: "Sample Subtitle",
+                imageName: "exampleImage"
+            )
+            .preferredColorScheme(.light)
+            
+            CardItem(
+                title: "Sample Title",
+                subtitle: "Sample Subtitle",
+                imageName: "exampleImage"
+            )
+            .preferredColorScheme(.dark)
+        }
+        .previewLayout(.sizeThatFits)
+        .padding()
     }
 }

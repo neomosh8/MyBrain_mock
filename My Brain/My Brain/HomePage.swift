@@ -60,7 +60,7 @@ struct HomeView: View {
         CardModel(
             title: "Blockchain for Everyday Use",
             subtitle: "Secure, decentralized solutions beyond crypto.",
-            imageName: "cover7"
+            imageName: "cover10"
         )
 
     ]
