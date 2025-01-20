@@ -16,7 +16,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68A88DAA2D3E000A0032EA02"
+               BlueprintIdentifier = "68A88E082D3E086A0032EA02"
                BuildableName = "MYBRAIN_SHARE_EXT_MOCK.appex"
                BlueprintName = "MYBRAIN_SHARE_EXT_MOCK"
                ReferencedContainer = "container:My Brain-neocore.xcodeproj">
