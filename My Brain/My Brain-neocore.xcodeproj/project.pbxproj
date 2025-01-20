@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		689EE2B12D3D5901005D342C /* Send to My Brain - neocore.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 689EE2A72D3D5901005D342C /* Send to My Brain - neocore.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		689EE2BD2D3D5C0A005D342C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 689EE2BC2D3D5C0A005D342C /* Lottie */; };
-		689EE2D42D3D600F005D342C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 689EE2D32D3D600F005D342C /* Lottie */; };
+		68A88E132D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 68A88E092D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		68A88E222D3E08870032EA02 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 68A88E212D3E08870032EA02 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		689EE2D12D3D5EFE005D342C /* PBXContainerItemProxy */ = {
+		68A88E112D3E086A0032EA02 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 689EE2312D3C4A6A005D342C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 689EE2A62D3D5901005D342C;
-			remoteInfo = "Send to My Brain";
+			remoteGlobalIDString = 68A88E082D3E086A0032EA02;
+			remoteInfo = MYBRAIN_SHARE_EXT_MOCK;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -29,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				689EE2B12D3D5901005D342C /* Send to My Brain - neocore.appex in Embed Foundation Extensions */,
+				68A88E132D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,43 +37,37 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		689EE2392D3C4A6A005D342C /* My Brain - neocore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Brain - neocore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		689EE2A72D3D5901005D342C /* Send to My Brain - neocore.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Send to My Brain - neocore.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A88DFE2D3E07C80032EA02 /* My Brain-neocore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Brain-neocore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A88E092D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MYBRAIN_SHARE_EXT_MOCK.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		689EE2BB2D3D5BCF005D342C /* Exceptions for "My Brain" folder in "Send to My Brain - neocore" target */ = {
+		68A88E142D3E086A0032EA02 /* Exceptions for "MYBRAIN_SHARE_EXT_MOCK" folder in "MYBRAIN_SHARE_EXT_MOCK" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				LottieView.swift,
+				Info.plist,
 			);
-			target = 689EE2A62D3D5901005D342C /* Send to My Brain - neocore */;
-		};
-		689EE2D92D3D60D4005D342C /* Exceptions for "Send to My Brain" folder in "My Brain - neocore" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				loadingAnimation.json,
-				ShareExtensionProgressView.swift,
-			);
-			target = 689EE2382D3C4A6A005D342C /* My Brain - neocore */;
+			target = 68A88E082D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		689EE23B2D3C4A6A005D342C /* My Brain */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				689EE2BB2D3D5BCF005D342C /* Exceptions for "My Brain" folder in "Send to My Brain - neocore" target */,
-			);
 			path = "My Brain";
 			sourceTree = "<group>";
 		};
-		689EE2A82D3D5901005D342C /* Send to My Brain */ = {
+		68A88DF82D3E077E0032EA02 /* MYBRAIN_SHARE_EXT_MOCK */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MYBRAIN_SHARE_EXT_MOCK;
+			sourceTree = "<group>";
+		};
+		68A88E0A2D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				689EE2D92D3D60D4005D342C /* Exceptions for "Send to My Brain" folder in "My Brain - neocore" target */,
+				68A88E142D3E086A0032EA02 /* Exceptions for "MYBRAIN_SHARE_EXT_MOCK" folder in "MYBRAIN_SHARE_EXT_MOCK" target */,
 			);
-			path = "Send to My Brain";
+			path = MYBRAIN_SHARE_EXT_MOCK;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -87,11 +81,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		689EE2A42D3D5901005D342C /* Frameworks */ = {
+		68A88E062D3E086A0032EA02 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				689EE2D42D3D600F005D342C /* Lottie in Frameworks */,
+				68A88E222D3E08870032EA02 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,26 +96,27 @@
 			isa = PBXGroup;
 			children = (
 				689EE23B2D3C4A6A005D342C /* My Brain */,
-				689EE2A82D3D5901005D342C /* Send to My Brain */,
-				689EE23A2D3C4A6A005D342C /* Products */,
+				68A88DF82D3E077E0032EA02 /* MYBRAIN_SHARE_EXT_MOCK */,
+				68A88DFE2D3E07C80032EA02 /* My Brain-neocore.app */,
+				68A88E092D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK.appex */,
+				68A88E0A2D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK */,
+				68A88E202D3E08870032EA02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		689EE23A2D3C4A6A005D342C /* Products */ = {
+		68A88E202D3E08870032EA02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				689EE2392D3C4A6A005D342C /* My Brain - neocore.app */,
-				689EE2A72D3D5901005D342C /* Send to My Brain - neocore.appex */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		689EE2382D3C4A6A005D342C /* My Brain - neocore */ = {
+		689EE2382D3C4A6A005D342C /* My Brain-neocore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 689EE2492D3C4A6C005D342C /* Build configuration list for PBXNativeTarget "My Brain - neocore" */;
+			buildConfigurationList = 689EE2492D3C4A6C005D342C /* Build configuration list for PBXNativeTarget "My Brain-neocore" */;
 			buildPhases = (
 				689EE2352D3C4A6A005D342C /* Sources */,
 				689EE2362D3C4A6A005D342C /* Frameworks */,
@@ -131,44 +126,42 @@
 			buildRules = (
 			);
 			dependencies = (
-				689EE2D22D3D5EFE005D342C /* PBXTargetDependency */,
-				689EE2D02D3D5EE3005D342C /* PBXTargetDependency */,
 				689EE2CE2D3D5EDF005D342C /* PBXTargetDependency */,
+				68A88E122D3E086A0032EA02 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				689EE23B2D3C4A6A005D342C /* My Brain */,
 			);
-			name = "My Brain - neocore";
+			name = "My Brain-neocore";
 			packageProductDependencies = (
 				689EE2BC2D3D5C0A005D342C /* Lottie */,
 			);
 			productName = "My Brain";
-			productReference = 689EE2392D3C4A6A005D342C /* My Brain - neocore.app */;
+			productReference = 68A88DFE2D3E07C80032EA02 /* My Brain-neocore.app */;
 			productType = "com.apple.product-type.application";
 		};
-		689EE2A62D3D5901005D342C /* Send to My Brain - neocore */ = {
+		68A88E082D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 689EE2B62D3D5901005D342C /* Build configuration list for PBXNativeTarget "Send to My Brain - neocore" */;
+			buildConfigurationList = 68A88E152D3E086A0032EA02 /* Build configuration list for PBXNativeTarget "MYBRAIN_SHARE_EXT_MOCK" */;
 			buildPhases = (
-				689EE2A32D3D5901005D342C /* Sources */,
-				689EE2A42D3D5901005D342C /* Frameworks */,
-				689EE2A52D3D5901005D342C /* Resources */,
+				68A88E052D3E086A0032EA02 /* Sources */,
+				68A88E062D3E086A0032EA02 /* Frameworks */,
+				68A88E072D3E086A0032EA02 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				689EE2CC2D3D5ED1005D342C /* PBXTargetDependency */,
-				689EE2CA2D3D5ECE005D342C /* PBXTargetDependency */,
+				68A88E242D3E08900032EA02 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				689EE2A82D3D5901005D342C /* Send to My Brain */,
+				68A88E0A2D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK */,
 			);
-			name = "Send to My Brain - neocore";
+			name = MYBRAIN_SHARE_EXT_MOCK;
 			packageProductDependencies = (
-				689EE2D32D3D600F005D342C /* Lottie */,
+				68A88E212D3E08870032EA02 /* Lottie */,
 			);
-			productName = "Send to My Brain";
-			productReference = 689EE2A72D3D5901005D342C /* Send to My Brain - neocore.appex */;
+			productName = MYBRAIN_SHARE_EXT_MOCK;
+			productReference = 68A88E092D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -184,7 +177,7 @@
 					689EE2382D3C4A6A005D342C = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					689EE2A62D3D5901005D342C = {
+					68A88E082D3E086A0032EA02 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -202,12 +195,12 @@
 				689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 689EE23A2D3C4A6A005D342C /* Products */;
+			productRefGroup = 689EE2302D3C4A6A005D342C;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				689EE2382D3C4A6A005D342C /* My Brain - neocore */,
-				689EE2A62D3D5901005D342C /* Send to My Brain - neocore */,
+				689EE2382D3C4A6A005D342C /* My Brain-neocore */,
+				68A88E082D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK */,
 			);
 		};
 /* End PBXProject section */
@@ -220,7 +213,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		689EE2A52D3D5901005D342C /* Resources */ = {
+		68A88E072D3E086A0032EA02 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -237,7 +230,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		689EE2A32D3D5901005D342C /* Sources */ = {
+		68A88E052D3E086A0032EA02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -247,26 +240,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		689EE2CA2D3D5ECE005D342C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 689EE2C92D3D5ECE005D342C /* Lottie-Dynamic */;
-		};
-		689EE2CC2D3D5ED1005D342C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 689EE2CB2D3D5ED1005D342C /* Lottie */;
-		};
 		689EE2CE2D3D5EDF005D342C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 689EE2CD2D3D5EDF005D342C /* Lottie */;
 		};
-		689EE2D02D3D5EE3005D342C /* PBXTargetDependency */ = {
+		68A88E122D3E086A0032EA02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = 689EE2CF2D3D5EE3005D342C /* Lottie-Dynamic */;
+			target = 68A88E082D3E086A0032EA02 /* MYBRAIN_SHARE_EXT_MOCK */;
+			targetProxy = 68A88E112D3E086A0032EA02 /* PBXContainerItemProxy */;
 		};
-		689EE2D22D3D5EFE005D342C /* PBXTargetDependency */ = {
+		68A88E242D3E08900032EA02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 689EE2A62D3D5901005D342C /* Send to My Brain - neocore */;
-			targetProxy = 689EE2D12D3D5EFE005D342C /* PBXContainerItemProxy */;
+			productRef = 68A88E232D3E08900032EA02 /* Lottie */;
 		};
 /* End PBXTargetDependency section */
 
@@ -450,23 +435,24 @@
 			};
 			name = Release;
 		};
-		689EE2B32D3D5901005D342C /* Debug */ = {
+		68A88E162D3E086A0032EA02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MS7857L94F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Send to My Brain/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Send to My Brain";
+				INFOPLIST_FILE = MYBRAIN_SHARE_EXT_MOCK/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MYBRAIN_SHARE_EXT_MOCK;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "neocore.My-Brain-neocore.Send-to-My-Brain";
+				PRODUCT_BUNDLE_IDENTIFIER = "neocore.My-Brain-neocore.MYBRAIN-SHARE-EXT-MOCK";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -475,23 +461,24 @@
 			};
 			name = Debug;
 		};
-		689EE2B42D3D5901005D342C /* Release */ = {
+		68A88E172D3E086A0032EA02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MS7857L94F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Send to My Brain/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Send to My Brain";
+				INFOPLIST_FILE = MYBRAIN_SHARE_EXT_MOCK/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MYBRAIN_SHARE_EXT_MOCK;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "neocore.My-Brain-neocore.Send-to-My-Brain";
+				PRODUCT_BUNDLE_IDENTIFIER = "neocore.My-Brain-neocore.MYBRAIN-SHARE-EXT-MOCK";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -512,7 +499,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		689EE2492D3C4A6C005D342C /* Build configuration list for PBXNativeTarget "My Brain - neocore" */ = {
+		689EE2492D3C4A6C005D342C /* Build configuration list for PBXNativeTarget "My Brain-neocore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				689EE24A2D3C4A6C005D342C /* Debug */,
@@ -521,11 +508,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		689EE2B62D3D5901005D342C /* Build configuration list for PBXNativeTarget "Send to My Brain - neocore" */ = {
+		68A88E152D3E086A0032EA02 /* Build configuration list for PBXNativeTarget "MYBRAIN_SHARE_EXT_MOCK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				689EE2B32D3D5901005D342C /* Debug */,
-				689EE2B42D3D5901005D342C /* Release */,
+				68A88E162D3E086A0032EA02 /* Debug */,
+				68A88E172D3E086A0032EA02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -549,27 +536,17 @@
 			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		689EE2C92D3D5ECE005D342C /* Lottie-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = "Lottie-Dynamic";
-		};
-		689EE2CB2D3D5ED1005D342C /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
 		689EE2CD2D3D5EDF005D342C /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		689EE2CF2D3D5EE3005D342C /* Lottie-Dynamic */ = {
+		68A88E212D3E08870032EA02 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = "Lottie-Dynamic";
+			productName = Lottie;
 		};
-		689EE2D32D3D600F005D342C /* Lottie */ = {
+		68A88E232D3E08900032EA02 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 689EE2B72D3D5BB5005D342C /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;

@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>My Brain - neocore.xcscheme_^#shared#^_</key>
+		<key>MYBRAIN_SHARE_EXT_MOCK.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>My Brain-neocore.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -13,11 +18,6 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
-		</dict>
-		<key>Send to My Brain - neocore.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Send to My Brain.xcscheme_^#shared#^_</key>
 		<dict>
@@ -33,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>689EE2A62D3D5901005D342C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>68A88DAA2D3E000A0032EA02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
